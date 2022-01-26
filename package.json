@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jt-rose/portfolio.git",
+  "author": "Jeffrey Rose <jtr219@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}

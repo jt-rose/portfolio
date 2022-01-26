@@ -1,7 +1,9 @@
+@use "../themes/colors";
+
 header nav {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(102, 102, 102);
+  background-color: colors.$light-grey;
 }
 
 header nav a {
@@ -14,5 +16,5 @@ header nav a {
 }
 
 header nav a:hover {
-  background-color: #2d2d2d;
+  background-color: colors.$dark-grey;
 }

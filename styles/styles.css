@@ -10,6 +10,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  align-items: center;
+}
+
+main {
+  max-width: 80%;
+}
+
+header {
+  width: 100%;
 }
 
 header nav {

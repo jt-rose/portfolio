@@ -1,5 +1,9 @@
 @use "../themes/colors";
 
+header {
+  width: 100%;
+}
+
 header nav {
   display: flex;
   justify-content: space-around;

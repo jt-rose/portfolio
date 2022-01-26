@@ -1,4 +1,4 @@
-import $ from "jquery";
+export {};
 $(() => {
   console.log("is this thing on?");
 });

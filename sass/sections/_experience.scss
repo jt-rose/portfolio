@@ -1,0 +1,23 @@
+#companies {
+  //   display: flex;
+  width: 100%;
+}
+
+#company-logos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#companies img {
+  width: 30%;
+}
+
+#ga-logo {
+  width: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+}

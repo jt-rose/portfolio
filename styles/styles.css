@@ -73,6 +73,7 @@ header nav a:hover {
 
 #skill-logos li {
   width: 15%;
+  min-width: 115px;
   padding: 1em;
 }
 

@@ -12,17 +12,20 @@
     <script src="./build/index.js"></script>
   </head>
   <body>
+    <!-- header and navbar -->
     <header>
       <nav>
         <a href="./index.html">Home</a>
-        <a href="./aboutme.html">About Me</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./pastwork.html">Past Work</a>
-        <a href="./contact.html">Contact</a>
+        <a href="#aboutme">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
     <main>
-      <img src="./assets/self.jpeg" alt="Self Portrait" />
+      <!-- intro / welcome page -->
+      <section id='intro'>
+        <img src="./assets/self.jpeg" alt="Self Portrait" />
       <h1>Jeff Rose</h1>
       <h3>Full Stack Web Developer</h3>
       <p>
@@ -46,6 +49,129 @@
         <li>Unit and Integration Testing</li>
         <li>Docker and Deployment</li>
       </ul>
+      </section>
+      <!-- personal bio -->
+      <section id='aboutme'>
+        <h1>About Me</h1>
+      <img src="./assets/self.jpeg" alt="Self Portrait" />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus porro,
+        nihil architecto quas recusandae nesciunt impedit blanditiis quo ipsum,
+        voluptate eius error. Sint accusantium atque ea, laborum nemo aliquam
+        fugit?
+      </p>
+      </section>
+      <section id='projects'>
+        <h1>Projects</h1>
+      <div>placeholder for arrow button</div>
+      <img src="./assets/self.jpeg" alt="Self Portrait" />
+      <div>placeholder for arrow button</div>
+      <h3>Project Name</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum,
+        reprehenderit minima delectus iure, molestiae nam earum sed commodi
+        provident repudiandae incidunt. Eius velit similique obcaecati
+        dignissimos qui consectetur voluptas.
+      </p>
+      <h4>Tech Stack</h4>
+      <ul>
+        <li>React</li>
+        <li>TypeScript</li>
+      </ul>
+      </section>
+      <!-- work experience -->
+      <section id='experience'>
+        <h1>Experience</h1>
+      <div>
+        <aside>
+          <div>General Assembly Fellow</div>
+          <div>Challenger</div>
+          <div>Bare International</div>
+          <div>ESL Tutor</div>
+        </aside>
+        <section id="ga-experience">
+          <h3>Bare International</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, aliquam! Dolor sapiente dignissimos eveniet quas,
+            nesciunt esse consequuntur! Tempore porro nulla reiciendis tenetur.
+            Repellendus, a veritatis accusantium tempora iure nihil.
+          </p>
+          <ul>
+            <li>accomplishment 1</li>
+            <li>accomplishment 2</li>
+            <li>accomplishment 3</li>
+            <li>accomplishment 4</li>
+          </ul>
+        </section>
+
+        <section id="challenger-experience">
+          <h3>Bare International</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, aliquam! Dolor sapiente dignissimos eveniet quas,
+            nesciunt esse consequuntur! Tempore porro nulla reiciendis tenetur.
+            Repellendus, a veritatis accusantium tempora iure nihil.
+          </p>
+          <ul>
+            <li>accomplishment 1</li>
+            <li>accomplishment 2</li>
+            <li>accomplishment 3</li>
+            <li>accomplishment 4</li>
+          </ul>
+        </section>
+
+        <section id="bare-experience">
+          <h3>Bare International</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, aliquam! Dolor sapiente dignissimos eveniet quas,
+            nesciunt esse consequuntur! Tempore porro nulla reiciendis tenetur.
+            Repellendus, a veritatis accusantium tempora iure nihil.
+          </p>
+          <ul>
+            <li>accomplishment 1</li>
+            <li>accomplishment 2</li>
+            <li>accomplishment 3</li>
+            <li>accomplishment 4</li>
+          </ul>
+        </section>
+
+        <section id="esl-experience">
+          <h3>Bare International</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, aliquam! Dolor sapiente dignissimos eveniet quas,
+            nesciunt esse consequuntur! Tempore porro nulla reiciendis tenetur.
+            Repellendus, a veritatis accusantium tempora iure nihil.
+          </p>
+          <ul>
+            <li>accomplishment 1</li>
+            <li>accomplishment 2</li>
+            <li>accomplishment 3</li>
+            <li>accomplishment 4</li>
+          </ul>
+      </section>
+      <!-- contact me -->
+      <section id='contact'>
+        <h1>Contact Me</h1>
+      <form action="">
+        <label for="name">Name:</label>
+        <input type="text" />
+        <label for="email">Email:</label>
+        <input type="text" />
+        <input type="submit" />
+      </form>
+      <ul>
+        <li><a href="">LinkedIn</a></li>
+        <li><a href="">GitHub</a></li>
+      </ul>
+      </section>
+      
     </main>
+    <!-- footer -->
+    <footer>
+
+    </footer>
   </body>
 </html>

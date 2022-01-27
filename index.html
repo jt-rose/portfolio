@@ -158,12 +158,13 @@
       <!-- contact me -->
       <section id='contact'>
         <h1>Contact Me</h1>
-      <form action="">
-        <label for="name">Name:</label>
-        <input type="text" />
-        <label for="email">Email:</label>
-        <input type="text" />
-        <input type="submit" />
+      <form name="contact" method="POST" data-netlify="true">
+        <label for="name">Name :<input type="text" name="name"/></label>
+        
+        <label for="email">Email: <input type="text" name="email"/></label>
+        
+        <label>Message: <textarea name="message"></textarea></label>
+        <button type="submit">Send</button>
       </form>
       <ul>
         <li><a href="">LinkedIn</a></li>

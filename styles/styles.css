@@ -90,24 +90,43 @@ header nav a:hover {
 #company-logos {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
 }
 
-#companies img {
-  width: 30%;
+#company-logos div {
+  width: 33%;
+  border: 1px solid #666666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#company-logos #challenger-logo-container {
+  width: 34%;
+}
+
+#companies div img {
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+  background-color: #fff;
 }
 
 #companies img:hover {
   cursor: pointer;
 }
 
-#ga-logo {
-  width: 20%;
-  padding-left: 5%;
-  padding-right: 5%;
+#company-logos #ga-logo {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-bottom: 0px;
+}
+
+#experience-description {
+  padding-top: 1em;
+  border-right: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  border-left: 1px solid #666666;
 }
 
 #experience-description article {

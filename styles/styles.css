@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -141,6 +143,41 @@ header nav a:hover {
 
 #bare-experience-info {
   display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #666666;
+  width: 100%;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input:required + span:after {
+  content: "required";
+}
+
+button {
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+  /* usual styles */
+  padding: 10px;
+  border: none;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,5 @@
+@use "./themes/fonts";
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ body {
   flex-direction: column;
   gap: 2em;
   align-items: center;
+  font-family: fonts.$main-font;
 }
 
 main {

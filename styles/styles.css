@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   gap: 2em;
   align-items: center;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 main {

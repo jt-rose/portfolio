@@ -1,3 +1,12 @@
 #intro-pic {
   border-radius: 50%;
 }
+
+#skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skill-logos img {
+  width: 80px;
+}

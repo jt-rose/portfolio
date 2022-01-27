@@ -28,6 +28,11 @@ main section {
   align-items: center;
 }
 
+#tech-logo {
+  width: 200px;
+  height: 200px;
+}
+
 header {
   width: 100%;
   position: sticky;
@@ -55,6 +60,15 @@ header nav a:hover {
 
 #intro-pic {
   border-radius: 50%;
+}
+
+#skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skill-logos img {
+  width: 80px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,8 +16,32 @@
   width: 30%;
 }
 
+#companies img:hover {
+  cursor: pointer;
+}
+
 #ga-logo {
   width: 20%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+#experience-description article {
+  text-align: center;
+}
+
+// clicking on the image will display description of the corresponding experience
+// to start these off, GA will be set to display: block
+// while the other two will be hidden
+
+#ga-experience-info {
+  display: block;
+}
+
+#challenger-experience-info {
+  display: none;
+}
+
+#bare-experience-info {
+  display: none;
 }

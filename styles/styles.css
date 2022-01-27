@@ -100,10 +100,30 @@ header nav a:hover {
   width: 30%;
 }
 
+#companies img:hover {
+  cursor: pointer;
+}
+
 #ga-logo {
   width: 20%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+#experience-description article {
+  text-align: center;
+}
+
+#ga-experience-info {
+  display: block;
+}
+
+#challenger-experience-info {
+  display: none;
+}
+
+#bare-experience-info {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

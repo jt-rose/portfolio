@@ -12,30 +12,56 @@ $(() => {
   const $bareExp = $("#bare-experience-info");
 
   /* -------------------------------------------------------------------------- */
-  /*                               site functions                               */
+  /*                      show and hide experience sections                     */
   /* -------------------------------------------------------------------------- */
 
-  //
+  // define curried functions that can show/hide and experience section
+  // and toggle the border-bottom to show if it is currently selected
+  const hideExperience =
+    ($logo: JQuery<HTMLElement>, $description: JQuery<HTMLElement>) => () => {
+      $description.hide();
+      $logo.css("border-bottom", "4px solid #fff");
+    };
+  const showExperience =
+    ($logo: JQuery<HTMLElement>, $description: JQuery<HTMLElement>) => () => {
+      $description.show();
+      $logo.css("border-bottom", "4px solid #666666");
+    };
 
-  /* -------------------------------------------------------------------------- */
-  /*                             add event listeners                            */
-  /* -------------------------------------------------------------------------- */
+  // store GA experience
+  const showGAExperience = showExperience($gaLogo, $gaExp);
+  const hideGAExperience = hideExperience($gaLogo, $gaExp);
 
+  // store Challenger
+  const showChallengerExperience = showExperience(
+    $challengerLogo,
+    $challengerExp
+  );
+  const hideChallengerExperience = hideExperience(
+    $challengerLogo,
+    $challengerExp
+  );
+
+  // store Bare experience
+  const showBareExperience = showExperience($bareLogo, $bareExp);
+  const hideBareExperience = hideExperience($bareLogo, $bareExp);
+
+  // set event listeners to manage showing/hiding appropriate experience section
   $gaLogo.on("click", () => {
-    $gaExp.show();
-    $challengerExp.hide();
-    $bareExp.hide();
+    showGAExperience();
+    hideChallengerExperience();
+    hideBareExperience();
   });
 
   $challengerLogo.on("click", () => {
-    $gaExp.hide();
-    $challengerExp.show();
-    $bareExp.hide();
+    hideGAExperience();
+    showChallengerExperience();
+    hideBareExperience();
   });
 
   $bareLogo.on("click", () => {
-    $gaExp.hide();
-    $challengerExp.hide();
-    $bareExp.show();
+    hideGAExperience();
+    hideChallengerExperience();
+    showBareExperience();
   });
 });

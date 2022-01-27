@@ -10,25 +10,41 @@ $(function () {
     var $challengerExp = $("#challenger-experience-info");
     var $bareExp = $("#bare-experience-info");
     /* -------------------------------------------------------------------------- */
-    /*                               site functions                               */
+    /*                      show and hide experience sections                     */
     /* -------------------------------------------------------------------------- */
-    //
-    /* -------------------------------------------------------------------------- */
-    /*                             add event listeners                            */
-    /* -------------------------------------------------------------------------- */
+    // define curried functions that can show/hide and experience section
+    // and toggle the border-bottom to show if it is currently selected
+    var hideExperience = function ($logo, $description) { return function () {
+        $description.hide();
+        $logo.css("border-bottom", "4px solid #fff");
+    }; };
+    var showExperience = function ($logo, $description) { return function () {
+        $description.show();
+        $logo.css("border-bottom", "4px solid #666666");
+    }; };
+    // store GA experience
+    var showGAExperience = showExperience($gaLogo, $gaExp);
+    var hideGAExperience = hideExperience($gaLogo, $gaExp);
+    // store Challenger
+    var showChallengerExperience = showExperience($challengerLogo, $challengerExp);
+    var hideChallengerExperience = hideExperience($challengerLogo, $challengerExp);
+    // store Bare experience
+    var showBareExperience = showExperience($bareLogo, $bareExp);
+    var hideBareExperience = hideExperience($bareLogo, $bareExp);
+    // set event listeners to manage showing/hiding appropriate experience section
     $gaLogo.on("click", function () {
-        $gaExp.show();
-        $challengerExp.hide();
-        $bareExp.hide();
+        showGAExperience();
+        hideChallengerExperience();
+        hideBareExperience();
     });
     $challengerLogo.on("click", function () {
-        $gaExp.hide();
-        $challengerExp.show();
-        $bareExp.hide();
+        hideGAExperience();
+        showChallengerExperience();
+        hideBareExperience();
     });
     $bareLogo.on("click", function () {
-        $gaExp.hide();
-        $challengerExp.hide();
-        $bareExp.show();
+        hideGAExperience();
+        hideChallengerExperience();
+        showBareExperience();
     });
 });

@@ -47,4 +47,8 @@ header nav a:hover {
   background-color: #2d2d2d;
 }
 
+#intro-pic {
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=styles.css.map */

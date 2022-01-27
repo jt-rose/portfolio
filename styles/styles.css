@@ -28,6 +28,10 @@ main section {
   align-items: center;
 }
 
+ul {
+  list-style: none;
+}
+
 #tech-logo {
   width: 200px;
   height: 200px;
@@ -67,8 +71,13 @@ header nav a:hover {
   flex-wrap: wrap;
 }
 
+#skill-logos li {
+  width: 15%;
+  padding: 1em;
+}
+
 #skill-logos img {
-  width: 80px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

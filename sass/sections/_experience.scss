@@ -17,10 +17,12 @@
 #company-logos div {
   width: 33%;
   //height: 100%;
-  border: 1px solid colors.$light-grey;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border-bottom: 4px solid #fff;
 }
 
 #company-logos #challenger-logo-container {
@@ -35,9 +37,9 @@
   background-color: #fff;
 }
 
-#companies img:hover {
-  cursor: pointer;
-}
+// #companies img:hover {
+//   cursor: pointer;
+// }
 
 #company-logos #ga-logo {
   width: 80%;
@@ -47,14 +49,15 @@
 }
 
 #experience-description {
-  padding-top: 1em;
-  border-right: 1px solid colors.$light-grey;
-  border-bottom: 1px solid colors.$light-grey;
-  border-left: 1px solid colors.$light-grey;
+  padding-top: 2em;
 }
 
 #experience-description article {
   text-align: center;
+}
+
+#company-logos #ga-logo-container {
+  border-bottom: 4px solid colors.$light-grey;
 }
 
 // clicking on the image will display description of the corresponding experience

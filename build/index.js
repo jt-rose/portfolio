@@ -3,9 +3,9 @@ $(function () {
     /* -------------------------------------------------------------------------- */
     /*                              get HTML elements                             */
     /* -------------------------------------------------------------------------- */
-    var $gaLogo = $("#ga-logo");
-    var $challengerLogo = $("#challenger-logo");
-    var $bareLogo = $("#bare-logo");
+    var $gaLogo = $("#ga-logo-container");
+    var $challengerLogo = $("#challenger-logo-container");
+    var $bareLogo = $("#bare-logo-container");
     var $gaExp = $("#ga-experience-info");
     var $challengerExp = $("#challenger-experience-info");
     var $bareExp = $("#bare-experience-info");

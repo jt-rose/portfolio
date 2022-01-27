@@ -94,10 +94,11 @@ header nav a:hover {
 
 #company-logos div {
   width: 33%;
-  border: 1px solid #666666;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border-bottom: 4px solid #fff;
 }
 
 #company-logos #challenger-logo-container {
@@ -111,10 +112,6 @@ header nav a:hover {
   background-color: #fff;
 }
 
-#companies img:hover {
-  cursor: pointer;
-}
-
 #company-logos #ga-logo {
   width: 80%;
   padding-left: 10%;
@@ -123,14 +120,15 @@ header nav a:hover {
 }
 
 #experience-description {
-  padding-top: 1em;
-  border-right: 1px solid #666666;
-  border-bottom: 1px solid #666666;
-  border-left: 1px solid #666666;
+  padding-top: 2em;
 }
 
 #experience-description article {
   text-align: center;
+}
+
+#company-logos #ga-logo-container {
+  border-bottom: 4px solid #666666;
 }
 
 #ga-experience-info {

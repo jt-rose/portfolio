@@ -3,9 +3,9 @@ $(() => {
   /*                              get HTML elements                             */
   /* -------------------------------------------------------------------------- */
 
-  const $gaLogo = $("#ga-logo");
-  const $challengerLogo = $("#challenger-logo");
-  const $bareLogo = $("#bare-logo");
+  const $gaLogo = $("#ga-logo-container");
+  const $challengerLogo = $("#challenger-logo-container");
+  const $bareLogo = $("#bare-logo-container");
 
   const $gaExp = $("#ga-experience-info");
   const $challengerExp = $("#challenger-experience-info");

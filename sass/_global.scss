@@ -23,3 +23,11 @@ body {
 main {
   max-width: 80%;
 }
+
+// apply centering to contents of each main section
+// can be overridden in individual sections as needed
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

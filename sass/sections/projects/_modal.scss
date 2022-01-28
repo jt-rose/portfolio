@@ -21,6 +21,7 @@
   margin: 5%;
   padding: 5%;
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 .project-image-container {
@@ -30,11 +31,13 @@
 }
 
 .project-image-container img {
-  width: 80%;
+  width: 70%;
+  height: calc((90vw * 0.7) * 0.63);
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .project-description-container {
   text-align: center;
+  min-width: 0;
 }

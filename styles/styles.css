@@ -140,6 +140,7 @@ header nav a:hover {
   margin: 5%;
   padding: 5%;
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 .project-image-container {
@@ -149,13 +150,15 @@ header nav a:hover {
 }
 
 .project-image-container img {
-  width: 80%;
+  width: 70%;
+  height: 39.69vw;
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .project-description-container {
   text-align: center;
+  min-width: 0;
 }
 
 #companies {

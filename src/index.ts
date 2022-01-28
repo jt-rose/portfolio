@@ -1,6 +1,26 @@
 $(() => {
   /* -------------------------------------------------------------------------- */
-  /*                              get HTML elements                             */
+  /*                        get projects section elements                       */
+  /* -------------------------------------------------------------------------- */
+
+  const $rxpPreview = $("#rxp-preview");
+  const $projectsModal = $("#projects-modal");
+  const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+
+  /* -------------------------------------------------------------------------- */
+  /*                        show and hide projects modal                        */
+  /* -------------------------------------------------------------------------- */
+
+  $rxpPreview.on("click", () => {
+    $projectsModal.css("display", "block");
+  });
+
+  $closeProjectsModalBtn.on("click", () => {
+    $projectsModal.css("display", "none");
+  });
+
+  /* -------------------------------------------------------------------------- */
+  /*                      get experience section elements                       */
   /* -------------------------------------------------------------------------- */
 
   const $gaLogo = $("#ga-logo-container");

@@ -1,7 +1,22 @@
 "use strict";
 $(function () {
     /* -------------------------------------------------------------------------- */
-    /*                              get HTML elements                             */
+    /*                        get projects section elements                       */
+    /* -------------------------------------------------------------------------- */
+    var $rxpPreview = $("#rxp-preview");
+    var $projectsModal = $("#projects-modal");
+    var $closeProjectsModalBtn = $("#close-projects-modal-btn");
+    /* -------------------------------------------------------------------------- */
+    /*                        show and hide projects modal                        */
+    /* -------------------------------------------------------------------------- */
+    $rxpPreview.on("click", function () {
+        $projectsModal.css("display", "block");
+    });
+    $closeProjectsModalBtn.on("click", function () {
+        $projectsModal.css("display", "none");
+    });
+    /* -------------------------------------------------------------------------- */
+    /*                      get experience section elements                       */
     /* -------------------------------------------------------------------------- */
     var $gaLogo = $("#ga-logo-container");
     var $challengerLogo = $("#challenger-logo-container");

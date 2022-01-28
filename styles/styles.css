@@ -85,6 +85,17 @@ header nav a:hover {
   width: 100%;
 }
 
+#projects-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightcoral;
+  display: none;
+}
+
 #companies {
   width: 100%;
 }

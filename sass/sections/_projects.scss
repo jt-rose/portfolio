@@ -14,3 +14,17 @@
   margin: 10%;
   padding: 10%;
 }
+
+#project-previews {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+  width: 100%;
+}
+
+#project-previews img {
+  width: 290px;
+  height: 183px;
+  border: 1px solid black;
+  border-radius: 15px;
+}

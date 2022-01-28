@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+#project-previews article:hover {
+  cursor: pointer;
+}
+
 #project-previews img {
   width: 290px;
   height: 183px;
@@ -32,5 +36,12 @@
 }
 
 #project-previews h3 {
+  padding-top: 0.3em;
   text-align: center;
+  font-size: 1.5em;
+}
+
+#project-previews article:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }

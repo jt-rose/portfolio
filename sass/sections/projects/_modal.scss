@@ -31,13 +31,26 @@
 }
 
 .project-image-container img {
-  width: 70%;
-  height: calc((90vw * 0.7) * 0.63);
+  width: 60%;
+  height: calc((90vw * 0.6) * 0.63);
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .project-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+  flex-grow: 1;
   text-align: center;
-  min-width: 0;
+}
+
+.project-description-container h4 {
+  text-decoration: underline;
+}
+
+.project-description-container ul {
+  display: flex;
+  justify-content: space-around;
 }

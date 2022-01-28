@@ -4,12 +4,20 @@ $(function () {
     /*                        get projects section elements                       */
     /* -------------------------------------------------------------------------- */
     var $rxpPreview = $("#rxp-preview");
+    var $cleanBlogPreview = $("#clean-blog-preview");
+    var $2dalooPreview = $("#2daloo-preview");
     var $projectsModal = $("#projects-modal");
     var $closeProjectsModalBtn = $("#close-projects-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                        show and hide projects modal                        */
     /* -------------------------------------------------------------------------- */
     $rxpPreview.on("click", function () {
+        $projectsModal.css("display", "block");
+    });
+    $cleanBlogPreview.on("click", function () {
+        $projectsModal.css("display", "block");
+    });
+    $2dalooPreview.on("click", function () {
         $projectsModal.css("display", "block");
     });
     $closeProjectsModalBtn.on("click", function () {

@@ -4,6 +4,8 @@ $(() => {
   /* -------------------------------------------------------------------------- */
 
   const $rxpPreview = $("#rxp-preview");
+  const $cleanBlogPreview = $("#clean-blog-preview");
+  const $2dalooPreview = $("#2daloo-preview");
   const $projectsModal = $("#projects-modal");
   const $closeProjectsModalBtn = $("#close-projects-modal-btn");
 
@@ -12,6 +14,14 @@ $(() => {
   /* -------------------------------------------------------------------------- */
 
   $rxpPreview.on("click", () => {
+    $projectsModal.css("display", "block");
+  });
+
+  $cleanBlogPreview.on("click", () => {
+    $projectsModal.css("display", "block");
+  });
+
+  $2dalooPreview.on("click", () => {
     $projectsModal.css("display", "block");
   });
 

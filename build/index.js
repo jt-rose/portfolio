@@ -12,16 +12,16 @@ $(function () {
     /*                        show and hide projects modal                        */
     /* -------------------------------------------------------------------------- */
     $rxpPreview.on("click", function () {
-        $projectsModal.css("display", "block");
+        $projectsModal.addClass("active");
     });
     $cleanBlogPreview.on("click", function () {
-        $projectsModal.css("display", "block");
+        $projectsModal.addClass("active");
     });
     $2dalooPreview.on("click", function () {
-        $projectsModal.css("display", "block");
+        $projectsModal.addClass("active");
     });
     $closeProjectsModalBtn.on("click", function () {
-        $projectsModal.css("display", "none");
+        $projectsModal.removeClass("active");
     });
     /* -------------------------------------------------------------------------- */
     /*                      get experience section elements                       */

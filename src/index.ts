@@ -14,19 +14,19 @@ $(() => {
   /* -------------------------------------------------------------------------- */
 
   $rxpPreview.on("click", () => {
-    $projectsModal.css("display", "block");
+    $projectsModal.addClass("active");
   });
 
   $cleanBlogPreview.on("click", () => {
-    $projectsModal.css("display", "block");
+    $projectsModal.addClass("active");
   });
 
   $2dalooPreview.on("click", () => {
-    $projectsModal.css("display", "block");
+    $projectsModal.addClass("active");
   });
 
   $closeProjectsModalBtn.on("click", () => {
-    $projectsModal.css("display", "none");
+    $projectsModal.removeClass("active");
   });
 
   /* -------------------------------------------------------------------------- */

@@ -128,6 +128,10 @@ header nav a:hover {
   display: none;
 }
 
+#projects-modal.active {
+  display: flex;
+}
+
 #inner-projects-modal {
   background-color: #fff;
   margin: 10%;

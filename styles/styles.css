@@ -150,12 +150,12 @@ header nav a:hover {
   text-align: center;
 }
 
-.project-description-container {
+#project-description-container {
   display: flex;
   flex-direction: column;
 }
 
-.projects-modal-sample-img {
+#projects-modal-sample-img {
   width: 70%;
   min-width: 290px;
   border-radius: 15px;
@@ -167,21 +167,21 @@ header nav a:hover {
   padding-top: 1em;
 }
 
-.project-skills-used ul {
+#project-skills-used ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
-  gap: 1.5em;
+  gap: 2em;
 }
 
-.project-skills-used li {
+#project-skills-used li {
   display: flex;
   align-items: center;
   gap: 0.2em;
 }
 
-.project-skills-used li img {
+#project-skills-used li img {
   height: 1.5em;
 }
 

@@ -17,25 +17,55 @@
 
 #inner-projects-modal {
   width: 90%;
+  height: 90%;
   padding: 5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
   text-align: center;
 }
 
-#inner-projects-modal img {
+.project-description-container {
+  //flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+// .project-description-container p {
+//   flex-grow: 1;
+// }
+
+.projects-modal-sample-img {
   width: 70%;
   min-width: 290px;
   border-radius: 15px;
   border: 1px solid black;
 }
 
-#inner-projects-modal ul {
+#inner-projects-modal {
+  h3,
+  h4 {
+    padding-top: 1em;
+  }
+}
+
+.project-skills-used ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-content: center;
+  gap: 2em;
+}
+
+.project-skills-used li {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.project-skills-used li img {
+  height: 1.5em;
 }

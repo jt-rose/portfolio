@@ -84,7 +84,7 @@ header nav a:hover {
 
 #skill-logos img {
   width: 100%;
-  max-width: 150px;
+  max-width: 110px;
 }
 
 #project-previews {
@@ -132,71 +132,33 @@ header nav a:hover {
 
 #projects-modal.active {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #inner-projects-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  background-color: #fff;
-  margin: 5%;
+  width: 90%;
   padding: 5%;
-  padding-bottom: 2%;
-  border-radius: 10px;
-  overflow-y: auto;
-}
-
-.project-image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.project-image-container img {
-  width: 60%;
-  height: 34.02vw;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.project-description-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 1em;
-  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
   text-align: center;
 }
 
-.project-description-container h4 {
-  text-decoration: underline;
+#inner-projects-modal img {
+  width: 70%;
+  min-width: 290px;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
-.project-description-container ul {
+#inner-projects-modal ul {
   display: flex;
-  justify-content: space-around;
-}
-
-#project-description-btn-container {
-  display: flex;
-  justify-content: right;
-}
-
-#project-description-btn-container button {
-  /* remove default behavior */
-  appearance: none;
-  -webkit-appearance: none;
-  /* usual styles */
-  padding: 10px;
-  border: none;
-  color: #3f51b5;
-  background-color: #fff;
-  font-weight: 600;
-  border-radius: 5px;
-  width: 20%;
-  min-width: 100px;
-  text-align: right;
-  font-size: 1em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 #companies {

@@ -7,7 +7,7 @@ $(function () {
     var $cleanBlogPreview = $("#clean-blog-preview");
     var $2dalooPreview = $("#2daloo-preview");
     var $projectsModal = $("#projects-modal");
-    var $closeProjectsModalBtn = $("#close-projects-modal-btn");
+    //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                        show and hide projects modal                        */
     /* -------------------------------------------------------------------------- */
@@ -20,8 +20,10 @@ $(function () {
     $2dalooPreview.on("click", function () {
         $projectsModal.addClass("active");
     });
-    $closeProjectsModalBtn.on("click", function () {
-        $projectsModal.removeClass("active");
+    $projectsModal.on("click", function (e) {
+        if ($(e.target).is("#projects-modal")) {
+            $projectsModal.removeClass("active");
+        }
     });
     /* -------------------------------------------------------------------------- */
     /*                      get experience section elements                       */

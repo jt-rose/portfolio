@@ -7,7 +7,7 @@ $(() => {
   const $cleanBlogPreview = $("#clean-blog-preview");
   const $2dalooPreview = $("#2daloo-preview");
   const $projectsModal = $("#projects-modal");
-  const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+  //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
 
   /* -------------------------------------------------------------------------- */
   /*                        show and hide projects modal                        */
@@ -25,8 +25,10 @@ $(() => {
     $projectsModal.addClass("active");
   });
 
-  $closeProjectsModalBtn.on("click", () => {
-    $projectsModal.removeClass("active");
+  $projectsModal.on("click", (e) => {
+    if ($(e.target).is("#projects-modal")) {
+      $projectsModal.removeClass("active");
+    }
   });
 
   /* -------------------------------------------------------------------------- */

@@ -84,6 +84,7 @@ header nav a:hover {
 
 #skill-logos img {
   width: 100%;
+  max-width: 150px;
 }
 
 #project-previews {
@@ -222,6 +223,7 @@ header nav a:hover {
 
 #companies div img {
   width: 100%;
+  max-width: 250px;
   padding: 1em;
   background-color: #fff;
 }

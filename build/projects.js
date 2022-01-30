@@ -60,6 +60,8 @@ $(function () {
     /* -------------------------------------------------------------------------- */
     /*                   update DOM to show project descriptions                  */
     /* -------------------------------------------------------------------------- */
+    // set all skill logos on model to be hidden by default
+    $("#project-skills-used li").hide();
     // use project data to update what data is currently being shown
     // in the projects modal
     var updateModalProjectData = function (projectData) { return function () {

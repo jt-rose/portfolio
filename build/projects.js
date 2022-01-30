@@ -9,6 +9,7 @@ var rxpData = {
     ],
     projectLink: "https://rxp.dev",
     githubLink: "https://github.com/jt-rose/rxp-site",
+    classNameForSkills: "rxp",
 };
 var cleanBlogData = {
     title: "Clean Blog",
@@ -23,6 +24,7 @@ var cleanBlogData = {
     ],
     projectLink: "https://clean-blog-react.vercel.app",
     githubLink: "https://github.com/jt-rose/clean_blog_react",
+    classNameForSkills: "clean-blog",
 };
 var _2dalooData = {
     title: "2daloo",
@@ -35,6 +37,7 @@ var _2dalooData = {
     ],
     projectLink: "https://jt-rose.github.io/2daloo/#/",
     githubLink: "https://github.com/jt-rose/2daloo",
+    classNameForSkills: "2daloo",
 };
 var currentImageIndex = 0;
 var currentProjectData = rxpData;
@@ -65,6 +68,8 @@ $(function () {
         $projectsModalTitle.text(projectData.title);
         $projectsModalDescription.text(projectData.description);
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
+        console.log($(".".concat(projectData.classNameForSkills)));
+        $(".".concat(projectData.classNameForSkills)).show();
         if (projectData.projectLink) {
             $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
             $urlSpace.show();
@@ -88,6 +93,7 @@ $(function () {
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {
             $projectsModal.removeClass("active");
+            $("#project-skills-used li").hide();
         }
     });
     // update modal image to next in set when clicking on images

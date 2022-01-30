@@ -7,7 +7,7 @@ interface ProjectData {
   imagePaths: string[];
   projectLink: string | null; // url may be null if project is server / utility
   githubLink: string;
-  // classNameForSkills - look for li skill logo elements
+  classNameForSkills: string; // look for li skill logo elements
   // with this class, set display on, then revert to hidden
   // when closing modal
 }
@@ -23,6 +23,7 @@ const rxpData: ProjectData = {
   ],
   projectLink: "https://rxp.dev",
   githubLink: "https://github.com/jt-rose/rxp-site",
+  classNameForSkills: "rxp",
 };
 
 const cleanBlogData: ProjectData = {
@@ -38,6 +39,7 @@ const cleanBlogData: ProjectData = {
   ],
   projectLink: "https://clean-blog-react.vercel.app",
   githubLink: "https://github.com/jt-rose/clean_blog_react",
+  classNameForSkills: "clean-blog",
 };
 
 const _2dalooData: ProjectData = {
@@ -51,6 +53,7 @@ const _2dalooData: ProjectData = {
   ],
   projectLink: "https://jt-rose.github.io/2daloo/#/",
   githubLink: "https://github.com/jt-rose/2daloo",
+  classNameForSkills: "2daloo",
 };
 
 let currentImageIndex = 0;
@@ -86,6 +89,8 @@ $(() => {
     $projectsModalTitle.text(projectData.title);
     $projectsModalDescription.text(projectData.description);
     $projectsModalImage.attr("src", projectData.imagePaths[0]);
+    console.log($(`.${projectData.classNameForSkills}`));
+    $(`.${projectData.classNameForSkills}`).show();
     if (projectData.projectLink) {
       $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
       $urlSpace.show();
@@ -111,6 +116,7 @@ $(() => {
   $projectsModal.on("click", (e) => {
     if ($(e.target).is("#projects-modal")) {
       $projectsModal.removeClass("active");
+      $("#project-skills-used li").hide();
     }
   });
 

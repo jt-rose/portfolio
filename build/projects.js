@@ -35,6 +35,7 @@ var _2dalooData = {
 };
 var currentImageIndex = 0;
 var currentProjectData = rxpData;
+// wait until DOM is loaded
 $(function () {
     /* -------------------------------------------------------------------------- */
     /*                        get projects section elements                       */
@@ -43,29 +44,27 @@ $(function () {
     var $cleanBlogPreview = $("#clean-blog-preview");
     var $2dalooPreview = $("#2daloo-preview");
     var $projectsModal = $("#projects-modal");
+    var $projectsModalTitle = $("#projects-modal-title");
+    var $projectsModalDescription = $("#projects-modal-description");
     var $projectsModalImage = $("#projects-modal-sample-img");
     //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                        show and hide projects modal                        */
     /* -------------------------------------------------------------------------- */
-    $rxpPreview.on("click", function () {
+    var updateModalProjectData = function (projectData) { return function () {
         currentImageIndex = 0;
-        currentProjectData = rxpData;
-        $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
+        currentProjectData = projectData;
+        $projectsModalTitle.text(projectData.title);
+        $projectsModalDescription.text(projectData.description);
+        $projectsModalImage.attr("src", projectData.imagePaths[0]);
         $projectsModal.addClass("active");
-    });
-    $cleanBlogPreview.on("click", function () {
-        currentImageIndex = 0;
-        currentProjectData = cleanBlogData;
-        $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
-        $projectsModal.addClass("active");
-    });
-    $2dalooPreview.on("click", function () {
-        currentImageIndex = 0;
-        currentProjectData = _2dalooData;
-        $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
-        $projectsModal.addClass("active");
-    });
+    }; };
+    var showRXPData = updateModalProjectData(rxpData);
+    var showCleanBlogData = updateModalProjectData(cleanBlogData);
+    var show2dalooData = updateModalProjectData(_2dalooData);
+    $rxpPreview.on("click", showRXPData);
+    $cleanBlogPreview.on("click", showCleanBlogData);
+    $2dalooPreview.on("click", show2dalooData);
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {
             $projectsModal.removeClass("active");

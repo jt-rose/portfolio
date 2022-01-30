@@ -46,6 +46,7 @@ const _2dalooData: ProjectData = {
 let currentImageIndex = 0;
 let currentProjectData: ProjectData = rxpData;
 
+// wait until DOM is loaded
 $(() => {
   /* -------------------------------------------------------------------------- */
   /*                        get projects section elements                       */
@@ -55,6 +56,8 @@ $(() => {
   const $cleanBlogPreview = $("#clean-blog-preview");
   const $2dalooPreview = $("#2daloo-preview");
   const $projectsModal = $("#projects-modal");
+  const $projectsModalTitle = $("#projects-modal-title");
+  const $projectsModalDescription = $("#projects-modal-description");
   const $projectsModalImage = $("#projects-modal-sample-img");
   //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
 
@@ -62,26 +65,24 @@ $(() => {
   /*                        show and hide projects modal                        */
   /* -------------------------------------------------------------------------- */
 
-  $rxpPreview.on("click", () => {
+  const updateModalProjectData = (projectData: ProjectData) => () => {
     currentImageIndex = 0;
-    currentProjectData = rxpData;
-    $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
+    currentProjectData = projectData;
+    $projectsModalTitle.text(projectData.title);
+    $projectsModalDescription.text(projectData.description);
+    $projectsModalImage.attr("src", projectData.imagePaths[0]);
     $projectsModal.addClass("active");
-  });
+  };
 
-  $cleanBlogPreview.on("click", () => {
-    currentImageIndex = 0;
-    currentProjectData = cleanBlogData;
-    $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
-    $projectsModal.addClass("active");
-  });
+  const showRXPData = updateModalProjectData(rxpData);
+  const showCleanBlogData = updateModalProjectData(cleanBlogData);
+  const show2dalooData = updateModalProjectData(_2dalooData);
 
-  $2dalooPreview.on("click", () => {
-    currentImageIndex = 0;
-    currentProjectData = _2dalooData;
-    $projectsModalImage.attr("src", currentProjectData.imagePaths[0]);
-    $projectsModal.addClass("active");
-  });
+  $rxpPreview.on("click", showRXPData);
+
+  $cleanBlogPreview.on("click", showCleanBlogData);
+
+  $2dalooPreview.on("click", show2dalooData);
 
   $projectsModal.on("click", (e) => {
     if ($(e.target).is("#projects-modal")) {

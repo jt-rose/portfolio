@@ -1,13 +1,12 @@
 /* -------------------------------------------------------------------------- */
-/*                              declare variables                             */
+/*                             store project data                             */
 /* -------------------------------------------------------------------------- */
-
 interface ProjectData {
   title: string;
   description: string;
   imagePaths: string[];
-  // projectLink
-  // githubLink
+  projectLink: string | null; // url may be null if project is server / utility
+  githubLink: string;
   // classNameForSkills - look for li skill logo elements
   // with this class, set display on, then revert to hidden
   // when closing modal
@@ -22,6 +21,8 @@ const rxpData: ProjectData = {
     "./assets/projects/rxp-2.png",
     "./assets/projects/rxp-3.png",
   ],
+  projectLink: "https://rxp.dev",
+  githubLink: "https://github.com/jt-rose/rxp-site",
 };
 
 const cleanBlogData: ProjectData = {
@@ -35,6 +36,8 @@ const cleanBlogData: ProjectData = {
     "./assets/projects/clean-blog-5.png",
     "./assets/projects/clean-blog-6.png",
   ],
+  projectLink: "https://clean-blog-react.vercel.app",
+  githubLink: "https://github.com/jt-rose/clean_blog_react",
 };
 
 const _2dalooData: ProjectData = {
@@ -46,6 +49,8 @@ const _2dalooData: ProjectData = {
     "./assets/projects/2daloo-3.png",
     "./assets/projects/2daloo-4.png",
   ],
+  projectLink: "https://jt-rose.github.io/2daloo/#/",
+  githubLink: "https://github.com/jt-rose/2daloo",
 };
 
 let currentImageIndex = 0;
@@ -64,6 +69,9 @@ $(() => {
   const $projectsModalTitle = $("#projects-modal-title");
   const $projectsModalDescription = $("#projects-modal-description");
   const $projectsModalImage = $("#projects-modal-sample-img");
+  const $projectsModalWebsiteURL = $("#website-url");
+  const $urlSpace = $("#url-space");
+  const $projectsModalGithubURL = $("#github-url");
   //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
 
   /* -------------------------------------------------------------------------- */
@@ -78,6 +86,14 @@ $(() => {
     $projectsModalTitle.text(projectData.title);
     $projectsModalDescription.text(projectData.description);
     $projectsModalImage.attr("src", projectData.imagePaths[0]);
+    if (projectData.projectLink) {
+      $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
+      $urlSpace.show();
+    } else {
+      $projectsModalWebsiteURL.hide();
+      $urlSpace.hide();
+    }
+    $projectsModalGithubURL.attr("href", projectData.githubLink);
     $projectsModal.addClass("active");
   };
 

@@ -1,7 +1,4 @@
 "use strict";
-/* -------------------------------------------------------------------------- */
-/*                              declare variables                             */
-/* -------------------------------------------------------------------------- */
 var rxpData = {
     title: "RXP",
     description: "RXP is an NPM library that aims to make regex easy to read, write, and modify. The RXP website provides full documentation, a regex cheat sheet, and a live code playground.",
@@ -10,6 +7,8 @@ var rxpData = {
         "./assets/projects/rxp-2.png",
         "./assets/projects/rxp-3.png",
     ],
+    projectLink: "https://rxp.dev",
+    githubLink: "https://github.com/jt-rose/rxp-site",
 };
 var cleanBlogData = {
     title: "Clean Blog",
@@ -22,6 +21,8 @@ var cleanBlogData = {
         "./assets/projects/clean-blog-5.png",
         "./assets/projects/clean-blog-6.png",
     ],
+    projectLink: "https://clean-blog-react.vercel.app",
+    githubLink: "https://github.com/jt-rose/clean_blog_react",
 };
 var _2dalooData = {
     title: "2daloo",
@@ -32,6 +33,8 @@ var _2dalooData = {
         "./assets/projects/2daloo-3.png",
         "./assets/projects/2daloo-4.png",
     ],
+    projectLink: "https://jt-rose.github.io/2daloo/#/",
+    githubLink: "https://github.com/jt-rose/2daloo",
 };
 var currentImageIndex = 0;
 var currentProjectData = rxpData;
@@ -47,6 +50,9 @@ $(function () {
     var $projectsModalTitle = $("#projects-modal-title");
     var $projectsModalDescription = $("#projects-modal-description");
     var $projectsModalImage = $("#projects-modal-sample-img");
+    var $projectsModalWebsiteURL = $("#website-url");
+    var $urlSpace = $("#url-space");
+    var $projectsModalGithubURL = $("#github-url");
     //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                   update DOM to show project descriptions                  */
@@ -59,6 +65,15 @@ $(function () {
         $projectsModalTitle.text(projectData.title);
         $projectsModalDescription.text(projectData.description);
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
+        if (projectData.projectLink) {
+            $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
+            $urlSpace.show();
+        }
+        else {
+            $projectsModalWebsiteURL.hide();
+            $urlSpace.hide();
+        }
+        $projectsModalGithubURL.attr("href", projectData.githubLink);
         $projectsModal.addClass("active");
     }; };
     // store different project's data

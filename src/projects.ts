@@ -6,6 +6,11 @@ interface ProjectData {
   title: string;
   description: string;
   imagePaths: string[];
+  // projectLink
+  // githubLink
+  // classNameForSkills - look for li skill logo elements
+  // with this class, set display on, then revert to hidden
+  // when closing modal
 }
 
 const rxpData: ProjectData = {

@@ -49,8 +49,10 @@ $(function () {
     var $projectsModalImage = $("#projects-modal-sample-img");
     //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
     /* -------------------------------------------------------------------------- */
-    /*                        show and hide projects modal                        */
+    /*                   update DOM to show project descriptions                  */
     /* -------------------------------------------------------------------------- */
+    // use project data to update what data is currently being shown
+    // in the projects modal
     var updateModalProjectData = function (projectData) { return function () {
         currentImageIndex = 0;
         currentProjectData = projectData;
@@ -59,17 +61,21 @@ $(function () {
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
         $projectsModal.addClass("active");
     }; };
+    // store different project's data
     var showRXPData = updateModalProjectData(rxpData);
     var showCleanBlogData = updateModalProjectData(cleanBlogData);
     var show2dalooData = updateModalProjectData(_2dalooData);
+    // align project data with project preview
     $rxpPreview.on("click", showRXPData);
     $cleanBlogPreview.on("click", showCleanBlogData);
     $2dalooPreview.on("click", show2dalooData);
+    // remove modal when clicking outside of active area
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {
             $projectsModal.removeClass("active");
         }
     });
+    // update modal image to next in set when clicking on images
     var updateProjectImage = function () {
         currentImageIndex++;
         if (currentImageIndex >= currentProjectData.imagePaths.length) {

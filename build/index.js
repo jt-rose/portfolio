@@ -1,31 +1,6 @@
 "use strict";
 $(function () {
     /* -------------------------------------------------------------------------- */
-    /*                        get projects section elements                       */
-    /* -------------------------------------------------------------------------- */
-    var $rxpPreview = $("#rxp-preview");
-    var $cleanBlogPreview = $("#clean-blog-preview");
-    var $2dalooPreview = $("#2daloo-preview");
-    var $projectsModal = $("#projects-modal");
-    //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
-    /* -------------------------------------------------------------------------- */
-    /*                        show and hide projects modal                        */
-    /* -------------------------------------------------------------------------- */
-    $rxpPreview.on("click", function () {
-        $projectsModal.addClass("active");
-    });
-    $cleanBlogPreview.on("click", function () {
-        $projectsModal.addClass("active");
-    });
-    $2dalooPreview.on("click", function () {
-        $projectsModal.addClass("active");
-    });
-    $projectsModal.on("click", function (e) {
-        if ($(e.target).is("#projects-modal")) {
-            $projectsModal.removeClass("active");
-        }
-    });
-    /* -------------------------------------------------------------------------- */
     /*                      get experience section elements                       */
     /* -------------------------------------------------------------------------- */
     var $gaLogo = $("#ga-logo-container");

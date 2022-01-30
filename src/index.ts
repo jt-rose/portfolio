@@ -1,37 +1,5 @@
 $(() => {
   /* -------------------------------------------------------------------------- */
-  /*                        get projects section elements                       */
-  /* -------------------------------------------------------------------------- */
-
-  const $rxpPreview = $("#rxp-preview");
-  const $cleanBlogPreview = $("#clean-blog-preview");
-  const $2dalooPreview = $("#2daloo-preview");
-  const $projectsModal = $("#projects-modal");
-  //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
-
-  /* -------------------------------------------------------------------------- */
-  /*                        show and hide projects modal                        */
-  /* -------------------------------------------------------------------------- */
-
-  $rxpPreview.on("click", () => {
-    $projectsModal.addClass("active");
-  });
-
-  $cleanBlogPreview.on("click", () => {
-    $projectsModal.addClass("active");
-  });
-
-  $2dalooPreview.on("click", () => {
-    $projectsModal.addClass("active");
-  });
-
-  $projectsModal.on("click", (e) => {
-    if ($(e.target).is("#projects-modal")) {
-      $projectsModal.removeClass("active");
-    }
-  });
-
-  /* -------------------------------------------------------------------------- */
   /*                      get experience section elements                       */
   /* -------------------------------------------------------------------------- */
 

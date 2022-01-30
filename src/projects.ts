@@ -28,13 +28,55 @@ let currentIndex = 0;
 let currentImageSet = rxpIMGPaths;
 
 $(() => {
+  /* -------------------------------------------------------------------------- */
+  /*                        get projects section elements                       */
+  /* -------------------------------------------------------------------------- */
+
+  const $rxpPreview = $("#rxp-preview");
+  const $cleanBlogPreview = $("#clean-blog-preview");
+  const $2dalooPreview = $("#2daloo-preview");
+  const $projectsModal = $("#projects-modal");
+  const $projectsModalImage = $("#projects-modal-sample-img");
+  //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+
+  /* -------------------------------------------------------------------------- */
+  /*                        show and hide projects modal                        */
+  /* -------------------------------------------------------------------------- */
+
+  $rxpPreview.on("click", () => {
+    currentIndex = 0;
+    currentImageSet = rxpIMGPaths;
+    $projectsModalImage.attr("src", currentImageSet[0]);
+    $projectsModal.addClass("active");
+  });
+
+  $cleanBlogPreview.on("click", () => {
+    currentIndex = 0;
+    currentImageSet = cleanBlogIMGPaths;
+    $projectsModalImage.attr("src", currentImageSet[0]);
+    $projectsModal.addClass("active");
+  });
+
+  $2dalooPreview.on("click", () => {
+    currentIndex = 0;
+    currentImageSet = _2dalooIMGPaths;
+    $projectsModalImage.attr("src", currentImageSet[0]);
+    $projectsModal.addClass("active");
+  });
+
+  $projectsModal.on("click", (e) => {
+    if ($(e.target).is("#projects-modal")) {
+      $projectsModal.removeClass("active");
+    }
+  });
+
   const updateProjectImage = () => {
     currentIndex++;
     if (currentIndex >= currentImageSet.length) {
       currentIndex = 0;
     }
-    $("#projects-modal-sample-img").attr("src", rxpIMGPaths[currentIndex]);
+    $projectsModalImage.attr("src", currentImageSet[currentIndex]);
   };
 
-  $("#projects-modal-sample-img").on("click", updateProjectImage);
+  $projectsModalImage.on("click", updateProjectImage);
 });

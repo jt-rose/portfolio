@@ -24,12 +24,47 @@ var _2dalooIMGPaths = [
 var currentIndex = 0;
 var currentImageSet = rxpIMGPaths;
 $(function () {
+    /* -------------------------------------------------------------------------- */
+    /*                        get projects section elements                       */
+    /* -------------------------------------------------------------------------- */
+    var $rxpPreview = $("#rxp-preview");
+    var $cleanBlogPreview = $("#clean-blog-preview");
+    var $2dalooPreview = $("#2daloo-preview");
+    var $projectsModal = $("#projects-modal");
+    var $projectsModalImage = $("#projects-modal-sample-img");
+    //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+    /* -------------------------------------------------------------------------- */
+    /*                        show and hide projects modal                        */
+    /* -------------------------------------------------------------------------- */
+    $rxpPreview.on("click", function () {
+        currentIndex = 0;
+        currentImageSet = rxpIMGPaths;
+        $projectsModalImage.attr("src", currentImageSet[0]);
+        $projectsModal.addClass("active");
+    });
+    $cleanBlogPreview.on("click", function () {
+        currentIndex = 0;
+        currentImageSet = cleanBlogIMGPaths;
+        $projectsModalImage.attr("src", currentImageSet[0]);
+        $projectsModal.addClass("active");
+    });
+    $2dalooPreview.on("click", function () {
+        currentIndex = 0;
+        currentImageSet = _2dalooIMGPaths;
+        $projectsModalImage.attr("src", currentImageSet[0]);
+        $projectsModal.addClass("active");
+    });
+    $projectsModal.on("click", function (e) {
+        if ($(e.target).is("#projects-modal")) {
+            $projectsModal.removeClass("active");
+        }
+    });
     var updateProjectImage = function () {
         currentIndex++;
         if (currentIndex >= currentImageSet.length) {
             currentIndex = 0;
         }
-        $("#projects-modal-sample-img").attr("src", rxpIMGPaths[currentIndex]);
+        $projectsModalImage.attr("src", currentImageSet[currentIndex]);
     };
-    $("#projects-modal-sample-img").on("click", updateProjectImage);
+    $projectsModalImage.on("click", updateProjectImage);
 });

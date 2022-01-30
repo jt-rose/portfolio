@@ -72,11 +72,15 @@ $(function () {
         $projectsModalDescription.text(projectData.description);
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
         var _loop_1 = function (i) {
-            var $link = $("<li>").text("A");
+            var $link = $("<li>").append("<div>");
+            //const $bullet = $('<div>').appendTo($link)
             $link.on("click", function () {
                 $projectsModalImage.attr("src", projectData.imagePaths[i]);
-                $projectImageLinks.children().css("background-color", "black");
-                $link.css("background-color", "red");
+                $projectImageLinks
+                    .children()
+                    .children()
+                    .css("background-color", "black");
+                $link.children().css("background-color", "red");
             });
             $projectImageLinks.append($link);
         };

@@ -46,6 +46,27 @@
   border: 1px solid black;
 }
 
+#project-image-links {
+  display: flex;
+}
+
+#project-image-links li {
+  padding: 0.5em;
+  margin-right: 0.4em;
+  margin-left: 0.4em;
+}
+
+#project-image-links li div {
+  background-color: gray;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+
+#project-image-links li:hover {
+  cursor: pointer;
+}
+
 #inner-projects-modal {
   h3,
   h4 {

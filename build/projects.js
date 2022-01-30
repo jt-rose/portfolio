@@ -53,6 +53,7 @@ $(function () {
     var $projectsModalTitle = $("#projects-modal-title");
     var $projectsModalDescription = $("#projects-modal-description");
     var $projectsModalImage = $("#projects-modal-sample-img");
+    var $projectImageLinks = $("#project-image-links");
     var $projectsModalWebsiteURL = $("#website-url");
     var $urlSpace = $("#url-space");
     var $projectsModalGithubURL = $("#github-url");
@@ -70,7 +71,18 @@ $(function () {
         $projectsModalTitle.text(projectData.title);
         $projectsModalDescription.text(projectData.description);
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
-        console.log($(".".concat(projectData.classNameForSkills)));
+        var _loop_1 = function (i) {
+            var $link = $("<li>").text("A");
+            $link.on("click", function () {
+                $projectsModalImage.attr("src", projectData.imagePaths[i]);
+                $projectImageLinks.children().css("background-color", "black");
+                $link.css("background-color", "red");
+            });
+            $projectImageLinks.append($link);
+        };
+        for (var i = 0; i < projectData.imagePaths.length; i++) {
+            _loop_1(i);
+        }
         $(".".concat(projectData.classNameForSkills)).show();
         if (projectData.projectLink) {
             $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
@@ -95,6 +107,7 @@ $(function () {
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {
             $projectsModal.removeClass("active");
+            $projectImageLinks.children().remove();
             $("#project-skills-used li").hide();
         }
     });

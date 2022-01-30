@@ -72,6 +72,7 @@ $(() => {
   const $projectsModalTitle = $("#projects-modal-title");
   const $projectsModalDescription = $("#projects-modal-description");
   const $projectsModalImage = $("#projects-modal-sample-img");
+  const $projectImageLinks = $("#project-image-links");
   const $projectsModalWebsiteURL = $("#website-url");
   const $urlSpace = $("#url-space");
   const $projectsModalGithubURL = $("#github-url");
@@ -92,7 +93,15 @@ $(() => {
     $projectsModalTitle.text(projectData.title);
     $projectsModalDescription.text(projectData.description);
     $projectsModalImage.attr("src", projectData.imagePaths[0]);
-    console.log($(`.${projectData.classNameForSkills}`));
+    for (let i = 0; i < projectData.imagePaths.length; i++) {
+      const $link = $("<li>").text("A");
+      $link.on("click", () => {
+        $projectsModalImage.attr("src", projectData.imagePaths[i]);
+        $projectImageLinks.children().css("background-color", "black");
+        $link.css("background-color", "red");
+      });
+      $projectImageLinks.append($link);
+    }
     $(`.${projectData.classNameForSkills}`).show();
     if (projectData.projectLink) {
       $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
@@ -119,6 +128,7 @@ $(() => {
   $projectsModal.on("click", (e) => {
     if ($(e.target).is("#projects-modal")) {
       $projectsModal.removeClass("active");
+      $projectImageLinks.children().remove();
       $("#project-skills-used li").hide();
     }
   });

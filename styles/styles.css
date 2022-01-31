@@ -206,7 +206,6 @@ header nav a {
   padding: 5%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
@@ -214,14 +213,23 @@ header nav a {
   text-align: center;
 }
 
-#project-description-container {
+@media (min-width: 1500px) {
+  #inner-projects-modal {
+    width: 1500px;
+    height: 800px;
+  }
+}
+#modal-image-container {
+  width: 70%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 #projects-modal-sample-img {
-  width: 70%;
+  aspect-ratio: 1.6/1;
   min-width: 290px;
+  max-width: 1200px;
+  max-height: 860px;
   border-radius: 15px;
   border: 1px solid black;
 }
@@ -244,6 +252,11 @@ header nav a {
 
 #project-image-links li:hover {
   cursor: pointer;
+}
+
+#project-description-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #inner-projects-modal h3,

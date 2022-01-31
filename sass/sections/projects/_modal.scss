@@ -109,6 +109,11 @@
   display: none;
 }
 
+#url-space {
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+}
+
 @media (min-width: 610px) {
   #inner-projects-modal {
     gap: 1em;

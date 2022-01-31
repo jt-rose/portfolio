@@ -269,6 +269,7 @@ header nav a {
   flex-direction: column;
   flex-grow: 1;
   gap: 1em;
+  justify-content: space-around;
 }
 
 #project-skills-used ul {
@@ -291,6 +292,11 @@ header nav a {
 
 .projects-modal-skill-name {
   display: none;
+}
+
+#url-space {
+  margin-right: 1.5em;
+  margin-left: 1.5em;
 }
 
 @media (min-width: 610px) {

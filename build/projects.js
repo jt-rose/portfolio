@@ -120,15 +120,20 @@ $(function () {
         if (projectData.imagePaths.length > 1) {
             var _loop_1 = function (i) {
                 var $link = $("<li>").append("<div>");
-                //const $bullet = $('<div>').appendTo($link)
                 $link.on("click", function () {
                     $projectsModalImage.attr("src", projectData.imagePaths[i]);
                     $projectImageLinks
                         .children()
                         .children()
-                        .css("background-color", "black");
-                    $link.children().css("background-color", "red");
+                        .css("background-color", "#004953");
+                    $link.children().css("background-color", "#20b2aa");
                 });
+                if (i === 0) {
+                    $link.children().css("background-color", "#20b2aa");
+                }
+                else {
+                    $link.children().css("background-color", "#004953");
+                }
                 $projectImageLinks.append($link);
             };
             for (var i = 0; i < projectData.imagePaths.length; i++) {
@@ -171,11 +176,16 @@ $(function () {
     });
     // update modal image to next in set when clicking on images
     var updateProjectImage = function () {
-        currentImageIndex++;
-        if (currentImageIndex >= currentProjectData.imagePaths.length) {
-            currentImageIndex = 0;
+        if (currentProjectData.imagePaths.length > 1) {
+            currentImageIndex++;
+            if (currentImageIndex >= currentProjectData.imagePaths.length) {
+                currentImageIndex = 0;
+            }
+            $projectsModalImage.attr("src", currentProjectData.imagePaths[currentImageIndex]);
+            var $currentImgLinks = $("li div");
+            $currentImgLinks.css("background-color", "#004953");
+            $currentImgLinks.eq(currentImageIndex).css("background-color", "#20b2aa");
         }
-        $projectsModalImage.attr("src", currentProjectData.imagePaths[currentImageIndex]);
     };
     $projectsModalImage.on("click", updateProjectImage);
 });

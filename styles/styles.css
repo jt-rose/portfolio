@@ -206,7 +206,7 @@ header nav a {
   padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 0.7em;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
@@ -267,19 +267,16 @@ header nav a {
 #project-description-container {
   display: flex;
   flex-direction: column;
-}
-
-#inner-projects-modal h3,
-#inner-projects-modal h4 {
-  padding-top: 1em;
+  flex-grow: 1;
+  gap: 1em;
 }
 
 #project-skills-used ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
-  gap: 2em;
+  gap: 3em;
 }
 
 #project-skills-used li {
@@ -292,6 +289,24 @@ header nav a {
   height: 1.5em;
 }
 
+.projects-modal-skill-name {
+  display: none;
+}
+
+@media (min-width: 610px) {
+  #inner-projects-modal {
+    gap: 1em;
+  }
+
+  #project-skills-used ul {
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+  .projects-modal-skill-name {
+    display: inline;
+  }
+}
 #companies {
   width: 100%;
 }

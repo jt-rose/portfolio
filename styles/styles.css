@@ -51,7 +51,6 @@ header {
   position: fixed;
   top: -274px;
   left: calc(100vw - 70px);
-  transition: 0.7s;
 }
 
 header.dropdown-active {

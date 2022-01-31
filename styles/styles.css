@@ -34,7 +34,7 @@ main section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10em;
+  margin-bottom: 7em;
 }
 
 h1 {
@@ -108,6 +108,10 @@ header nav a {
   border-radius: 50%;
   border: 2px solid black;
   margin-bottom: 2em;
+}
+
+#intro h3 {
+  margin-bottom: 1.5em;
 }
 
 #skill-logos {

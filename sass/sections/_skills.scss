@@ -1,0 +1,15 @@
+#skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#skill-logos li {
+  width: 15%;
+  min-width: 115px;
+  padding: 1em;
+}
+#skill-logos img {
+  width: 100%;
+  max-width: 110px;
+}

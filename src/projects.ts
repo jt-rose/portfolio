@@ -12,6 +12,7 @@ interface ProjectData {
   // when closing modal
 }
 
+// frontends
 const rxpData: ProjectData = {
   title: "RXP",
   description:
@@ -56,6 +57,52 @@ const _2dalooData: ProjectData = {
   classNameForSkills: "2daloo",
 };
 
+// servers
+const vgSalesData: ProjectData = {
+  title: "VG-Sales",
+  description: "lorme ipsum",
+  imagePaths: ["./assets/projects/vg-sales.png"],
+  projectLink: null,
+  githubLink: "https://github.com/jt-rose/vg_sales_server",
+  classNameForSkills: "vg-sales",
+};
+
+const cleanBlogServerData: ProjectData = {
+  title: "Clean Blog Server",
+  description: "lorem ipsum",
+  imagePaths: ["./assets/projects/clean-blog-server.png"],
+  projectLink: null,
+  githubLink: "https://github.com/jt-rose/clean_blog_server",
+  classNameForSkills: "clean-blog-server",
+};
+
+const chMeetingsData: ProjectData = {
+  title: "CH Meetings",
+  description: "lorem ipsum",
+  imagePaths: ["./assets/projects/ch-meetings.png"],
+  projectLink: null,
+  githubLink: "https://github.com/jt-rose/ch_meetings_server",
+  classNameForSkills: "ch-meetings",
+};
+// utilities
+const sudokioData: ProjectData = {
+  title: "Sudokio",
+  description: "lorem ipsum",
+  imagePaths: [],
+  projectLink: null,
+  githubLink: "https://github.com/jt-rose/sudokio_cli",
+  classNameForSkills: "sudokio",
+};
+
+const rxpNPMData: ProjectData = {
+  title: "RXP",
+  description: "lorem ipsum",
+  imagePaths: [],
+  projectLink: "https://www.npmjs.com/package/rxp", // NPM link
+  githubLink: "https://github.com/jt-rose/rxp",
+  classNameForSkills: "rxp-npm",
+};
+
 let currentImageIndex = 0;
 let currentProjectData: ProjectData = rxpData;
 
@@ -68,6 +115,10 @@ $(() => {
   const $rxpPreview = $("#rxp-preview");
   const $cleanBlogPreview = $("#clean-blog-preview");
   const $2dalooPreview = $("#2daloo-preview");
+  const $vgSalesPreview = $("#vg-sales-preview");
+  const $chMeetingsPreview = $("#ch-meetings-preview");
+  const $cleanBlogServerPreview = $("#clean-blog-server-preview");
+
   const $projectsModal = $("#projects-modal");
   const $projectsModalTitle = $("#projects-modal-title");
   const $projectsModalDescription = $("#projects-modal-description");
@@ -123,10 +174,18 @@ $(() => {
   const showCleanBlogData = updateModalProjectData(cleanBlogData);
   const show2dalooData = updateModalProjectData(_2dalooData);
 
+  const showVGSalesData = updateModalProjectData(vgSalesData);
+  const showCHMeetingsData = updateModalProjectData(chMeetingsData);
+  const showCleanBlogServerData = updateModalProjectData(cleanBlogServerData);
+
   // align project data with project preview
   $rxpPreview.on("click", showRXPData);
   $cleanBlogPreview.on("click", showCleanBlogData);
   $2dalooPreview.on("click", show2dalooData);
+
+  $vgSalesPreview.on("click", showVGSalesData);
+  $chMeetingsPreview.on("click", showCHMeetingsData);
+  $cleanBlogServerPreview.on("click", showCleanBlogServerData);
 
   // remove modal when clicking outside of active area
   $projectsModal.on("click", (e) => {

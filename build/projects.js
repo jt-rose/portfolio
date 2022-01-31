@@ -1,4 +1,5 @@
 "use strict";
+// frontends
 var rxpData = {
     title: "RXP",
     description: "RXP is an NPM library that aims to make regex easy to read, write, and modify. The RXP website provides full documentation, a regex cheat sheet, and a live code playground.",
@@ -39,6 +40,48 @@ var _2dalooData = {
     githubLink: "https://github.com/jt-rose/2daloo",
     classNameForSkills: "2daloo",
 };
+// servers
+var vgSalesData = {
+    title: "VG-Sales",
+    description: "lorme ipsum",
+    imagePaths: ["./assets/projects/vg-sales.png"],
+    projectLink: null,
+    githubLink: "https://github.com/jt-rose/vg_sales_server",
+    classNameForSkills: "vg-sales",
+};
+var cleanBlogServerData = {
+    title: "Clean Blog Server",
+    description: "lorem ipsum",
+    imagePaths: ["./assets/projects/clean-blog-server.png"],
+    projectLink: null,
+    githubLink: "https://github.com/jt-rose/clean_blog_server",
+    classNameForSkills: "clean-blog-server",
+};
+var chMeetingsData = {
+    title: "CH Meetings",
+    description: "lorem ipsum",
+    imagePaths: ["./assets/projects/ch-meetings.png"],
+    projectLink: null,
+    githubLink: "https://github.com/jt-rose/ch_meetings_server",
+    classNameForSkills: "ch-meetings",
+};
+// utilities
+var sudokioData = {
+    title: "Sudokio",
+    description: "lorem ipsum",
+    imagePaths: [],
+    projectLink: null,
+    githubLink: "https://github.com/jt-rose/sudokio_cli",
+    classNameForSkills: "sudokio",
+};
+var rxpNPMData = {
+    title: "RXP",
+    description: "lorem ipsum",
+    imagePaths: [],
+    projectLink: "https://www.npmjs.com/package/rxp",
+    githubLink: "https://github.com/jt-rose/rxp",
+    classNameForSkills: "rxp-npm",
+};
 var currentImageIndex = 0;
 var currentProjectData = rxpData;
 // wait until DOM is loaded
@@ -49,6 +92,9 @@ $(function () {
     var $rxpPreview = $("#rxp-preview");
     var $cleanBlogPreview = $("#clean-blog-preview");
     var $2dalooPreview = $("#2daloo-preview");
+    var $vgSalesPreview = $("#vg-sales-preview");
+    var $chMeetingsPreview = $("#ch-meetings-preview");
+    var $cleanBlogServerPreview = $("#clean-blog-server-preview");
     var $projectsModal = $("#projects-modal");
     var $projectsModalTitle = $("#projects-modal-title");
     var $projectsModalDescription = $("#projects-modal-description");
@@ -103,10 +149,16 @@ $(function () {
     var showRXPData = updateModalProjectData(rxpData);
     var showCleanBlogData = updateModalProjectData(cleanBlogData);
     var show2dalooData = updateModalProjectData(_2dalooData);
+    var showVGSalesData = updateModalProjectData(vgSalesData);
+    var showCHMeetingsData = updateModalProjectData(chMeetingsData);
+    var showCleanBlogServerData = updateModalProjectData(cleanBlogServerData);
     // align project data with project preview
     $rxpPreview.on("click", showRXPData);
     $cleanBlogPreview.on("click", showCleanBlogData);
     $2dalooPreview.on("click", show2dalooData);
+    $vgSalesPreview.on("click", showVGSalesData);
+    $chMeetingsPreview.on("click", showCHMeetingsData);
+    $cleanBlogServerPreview.on("click", showCleanBlogServerData);
     // remove modal when clicking outside of active area
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {

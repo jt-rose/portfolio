@@ -103,7 +103,7 @@ $(function () {
     var $projectsModalWebsiteURL = $("#website-url");
     var $urlSpace = $("#url-space");
     var $projectsModalGithubURL = $("#github-url");
-    //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+    var $closeProjectsModalBtn = $("#close-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                   update DOM to show project descriptions                  */
     /* -------------------------------------------------------------------------- */
@@ -167,13 +167,17 @@ $(function () {
     $chMeetingsPreview.on("click", showCHMeetingsData);
     $cleanBlogServerPreview.on("click", showCleanBlogServerData);
     // remove modal when clicking outside of active area
+    var removeModal = function () {
+        $projectsModal.removeClass("active");
+        $projectImageLinks.children().remove();
+        $("#project-skills-used li").hide();
+    };
     $projectsModal.on("click", function (e) {
         if ($(e.target).is("#projects-modal")) {
-            $projectsModal.removeClass("active");
-            $projectImageLinks.children().remove();
-            $("#project-skills-used li").hide();
+            removeModal();
         }
     });
+    $closeProjectsModalBtn.on("click", removeModal);
     // update modal image to next in set when clicking on images
     var updateProjectImage = function () {
         if (currentProjectData.imagePaths.length > 1) {

@@ -133,7 +133,7 @@ $(() => {
   const $projectsModalWebsiteURL = $("#website-url");
   const $urlSpace = $("#url-space");
   const $projectsModalGithubURL = $("#github-url");
-  //const $closeProjectsModalBtn = $("#close-projects-modal-btn");
+  const $closeProjectsModalBtn = $("#close-modal-btn");
 
   /* -------------------------------------------------------------------------- */
   /*                   update DOM to show project descriptions                  */
@@ -200,13 +200,18 @@ $(() => {
   $cleanBlogServerPreview.on("click", showCleanBlogServerData);
 
   // remove modal when clicking outside of active area
+  const removeModal = () => {
+    $projectsModal.removeClass("active");
+    $projectImageLinks.children().remove();
+    $("#project-skills-used li").hide();
+  };
   $projectsModal.on("click", (e) => {
     if ($(e.target).is("#projects-modal")) {
-      $projectsModal.removeClass("active");
-      $projectImageLinks.children().remove();
-      $("#project-skills-used li").hide();
+      removeModal();
     }
   });
+
+  $closeProjectsModalBtn.on("click", removeModal);
 
   // update modal image to next in set when clicking on images
   const updateProjectImage = () => {

@@ -131,6 +131,14 @@ header nav a {
   max-width: 110px;
 }
 
+#me-and-the-boys {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
 #project-previews {
   padding-top: 2em;
   display: flex;

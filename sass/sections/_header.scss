@@ -4,7 +4,7 @@ header {
   width: 100%;
   position: fixed;
   top: -273px;
-  left: calc(100vw - 100px);
+  left: calc(100vw - 70px);
   transition: 1s;
 }
 
@@ -21,6 +21,7 @@ header nav {
 #menu-icon {
   border-bottom-left-radius: 20px;
   text-align: left;
+  padding-left: 1.5em;
 }
 
 @media (min-width: 610px) {

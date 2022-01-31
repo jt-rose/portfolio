@@ -150,18 +150,20 @@ $(() => {
     $projectsModalTitle.text(projectData.title);
     $projectsModalDescription.text(projectData.description);
     $projectsModalImage.attr("src", projectData.imagePaths[0]);
-    for (let i = 0; i < projectData.imagePaths.length; i++) {
-      const $link = $("<li>").append("<div>");
-      //const $bullet = $('<div>').appendTo($link)
-      $link.on("click", () => {
-        $projectsModalImage.attr("src", projectData.imagePaths[i]);
-        $projectImageLinks
-          .children()
-          .children()
-          .css("background-color", "black");
-        $link.children().css("background-color", "red");
-      });
-      $projectImageLinks.append($link);
+    if (projectData.imagePaths.length > 1) {
+      for (let i = 0; i < projectData.imagePaths.length; i++) {
+        const $link = $("<li>").append("<div>");
+        //const $bullet = $('<div>').appendTo($link)
+        $link.on("click", () => {
+          $projectsModalImage.attr("src", projectData.imagePaths[i]);
+          $projectImageLinks
+            .children()
+            .children()
+            .css("background-color", "black");
+          $link.children().css("background-color", "red");
+        });
+        $projectImageLinks.append($link);
+      }
     }
     $(`.${projectData.classNameForSkills}`).show();
     if (projectData.projectLink) {

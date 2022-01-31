@@ -75,7 +75,7 @@ header nav {
 
 header nav a {
   color: #fff;
-  background-color: #666666;
+  background-color: #004953;
   text-align: center;
   text-decoration: none;
   padding: 1em;
@@ -97,7 +97,7 @@ header nav a {
   }
 
   header nav a:hover {
-    background-color: #2d2d2d;
+    background-color: #20b2aa;
   }
 
   #menu-icon {
@@ -342,7 +342,7 @@ textarea {
   padding: 10px;
   margin: 10px 0;
   border: 0;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #004953;
   width: 100%;
   font-family: inherit;
   resize: vertical;
@@ -351,8 +351,8 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none !important;
-  border-bottom: 1px solid #3f51b5;
-  border-left: 1px solid #3f51b5;
+  border-bottom: 1px solid #004953;
+  border-left: 1px solid #004953;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 5px;
 }
@@ -364,11 +364,15 @@ button {
   /* usual styles */
   padding: 10px;
   border: none;
-  background-color: #3f51b5;
+  background-color: #004953;
   color: #fff;
   font-weight: 600;
   border-radius: 5px;
   width: 100%;
+}
+
+button:hover {
+  background-color: #20b2aa;
 }
 
 #contact ul {

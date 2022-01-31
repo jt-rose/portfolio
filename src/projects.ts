@@ -28,8 +28,9 @@ const rxpData: ProjectData = {
 };
 
 const cleanBlogData: ProjectData = {
-  title: "Clean Blog",
-  description: "lorem ipsum",
+  title: "Clean Blog <React>",
+  description:
+    "A React conversion of the popular Start Bootstrap Blog template that uses NextJS for static site generation",
   imagePaths: [
     "./assets/projects/clean-blog-1-mobile.png",
     "./assets/projects/clean-blog-2.png",
@@ -45,7 +46,8 @@ const cleanBlogData: ProjectData = {
 
 const _2dalooData: ProjectData = {
   title: "2daloo",
-  description: "lorem ipsum ...",
+  description:
+    "A clean task tracking app with sorting, filtering, and categorizing features",
   imagePaths: [
     "./assets/projects/2daloo-1.png",
     "./assets/projects/2daloo-2.png",
@@ -60,7 +62,8 @@ const _2dalooData: ProjectData = {
 // servers
 const vgSalesData: ProjectData = {
   title: "VG-Sales",
-  description: "lorme ipsum",
+  description:
+    "A GraphQL server / PostgreSQL database enabling users to dynamically query the history of video game sales across years, genres, consoles, etc.",
   imagePaths: ["./assets/projects/vg-sales.png"],
   projectLink: null,
   githubLink: "https://github.com/jt-rose/vg_sales_server",
@@ -69,7 +72,7 @@ const vgSalesData: ProjectData = {
 
 const cleanBlogServerData: ProjectData = {
   title: "Clean Blog Server",
-  description: "lorem ipsum",
+  description: "A Golang / GraphQL server managing the database for a blog CMS",
   imagePaths: ["./assets/projects/clean-blog-server.png"],
   projectLink: null,
   githubLink: "https://github.com/jt-rose/clean_blog_server",
@@ -78,7 +81,8 @@ const cleanBlogServerData: ProjectData = {
 
 const chMeetingsData: ProjectData = {
   title: "CH Meetings",
-  description: "lorem ipsum",
+  description:
+    "A backend server and database to manage sales enablement programs through scheduling eLearning and training workshops, with extensive use of authentication, session management, user roles, and data validation",
   imagePaths: ["./assets/projects/ch-meetings.png"],
   projectLink: null,
   githubLink: "https://github.com/jt-rose/ch_meetings_server",
@@ -87,7 +91,8 @@ const chMeetingsData: ProjectData = {
 // utilities
 const sudokioData: ProjectData = {
   title: "Sudokio",
-  description: "lorem ipsum",
+  description:
+    "A CLI that solves sudoku puzzles by imitating human strategies, storing detailed data on turn-by-turn solutions to guide the user",
   imagePaths: [],
   projectLink: null,
   githubLink: "https://github.com/jt-rose/sudokio_cli",
@@ -96,7 +101,8 @@ const sudokioData: ProjectData = {
 
 const rxpNPMData: ProjectData = {
   title: "RXP",
-  description: "lorem ipsum",
+  description:
+    "An NPM library that makes it easy to read, write, and modify regular expressions",
   imagePaths: [],
   projectLink: "https://www.npmjs.com/package/rxp", // NPM link
   githubLink: "https://github.com/jt-rose/rxp",

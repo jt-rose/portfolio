@@ -23,7 +23,14 @@ body {
 }
 
 main {
+  padding-top: 3em;
   max-width: 80%;
+}
+
+@media (min-width: 610px) {
+  main {
+    padding-top: 1em;
+  }
 }
 
 // apply centering to contents of each main section

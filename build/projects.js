@@ -112,11 +112,14 @@ $(function () {
     // use project data to update what data is currently being shown
     // in the projects modal
     var updateModalProjectData = function (projectData) { return function () {
+        // reset image index and image set
         currentImageIndex = 0;
         currentProjectData = projectData;
+        // format project info based on project data object
         $projectsModalTitle.text(projectData.title);
         $projectsModalDescription.text(projectData.description);
         $projectsModalImage.attr("src", projectData.imagePaths[0]);
+        // if there is more than one image, create bullet navigation
         if (projectData.imagePaths.length > 1) {
             var _loop_1 = function (i) {
                 var $link = $("<li>").append("<div>");
@@ -140,7 +143,9 @@ $(function () {
                 _loop_1(i);
             }
         }
+        // show relevant skills for that project
         $(".".concat(projectData.classNameForSkills)).show();
+        // if frontend project, share url
         if (projectData.projectLink) {
             $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
             $urlSpace.show();
@@ -149,6 +154,7 @@ $(function () {
             $projectsModalWebsiteURL.hide();
             $urlSpace.hide();
         }
+        // show github link
         $projectsModalGithubURL.attr("href", projectData.githubLink);
         $projectsModal.addClass("active");
     }; };

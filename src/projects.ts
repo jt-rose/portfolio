@@ -145,11 +145,16 @@ $(() => {
   // use project data to update what data is currently being shown
   // in the projects modal
   const updateModalProjectData = (projectData: ProjectData) => () => {
+    // reset image index and image set
     currentImageIndex = 0;
     currentProjectData = projectData;
+
+    // format project info based on project data object
     $projectsModalTitle.text(projectData.title);
     $projectsModalDescription.text(projectData.description);
     $projectsModalImage.attr("src", projectData.imagePaths[0]);
+
+    // if there is more than one image, create bullet navigation
     if (projectData.imagePaths.length > 1) {
       for (let i = 0; i < projectData.imagePaths.length; i++) {
         const $link = $("<li>").append("<div>");
@@ -169,7 +174,11 @@ $(() => {
         $projectImageLinks.append($link);
       }
     }
+
+    // show relevant skills for that project
     $(`.${projectData.classNameForSkills}`).show();
+
+    // if frontend project, share url
     if (projectData.projectLink) {
       $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
       $urlSpace.show();
@@ -177,6 +186,8 @@ $(() => {
       $projectsModalWebsiteURL.hide();
       $urlSpace.hide();
     }
+
+    // show github link
     $projectsModalGithubURL.attr("href", projectData.githubLink);
     $projectsModal.addClass("active");
   };

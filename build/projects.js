@@ -103,7 +103,7 @@ $(function () {
     var $projectsModalWebsiteURL = $("#website-url");
     var $urlSpace = $("#url-space");
     var $projectsModalGithubURL = $("#github-url");
-    var $closeProjectsModalBtn = $("#close-modal-btn");
+    var $closeProjectsModalButtons = $(".close-modal-btn");
     /* -------------------------------------------------------------------------- */
     /*                   update DOM to show project descriptions                  */
     /* -------------------------------------------------------------------------- */
@@ -177,7 +177,7 @@ $(function () {
             removeModal();
         }
     });
-    $closeProjectsModalBtn.on("click", removeModal);
+    $closeProjectsModalButtons.on("click", removeModal);
     // update modal image to next in set when clicking on images
     var updateProjectImage = function () {
         if (currentProjectData.imagePaths.length > 1) {

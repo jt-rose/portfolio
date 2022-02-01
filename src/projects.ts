@@ -133,7 +133,7 @@ $(() => {
   const $projectsModalWebsiteURL = $("#website-url");
   const $urlSpace = $("#url-space");
   const $projectsModalGithubURL = $("#github-url");
-  const $closeProjectsModalBtn = $("#close-modal-btn");
+  const $closeProjectsModalButtons = $(".close-modal-btn");
 
   /* -------------------------------------------------------------------------- */
   /*                   update DOM to show project descriptions                  */
@@ -211,7 +211,7 @@ $(() => {
     }
   });
 
-  $closeProjectsModalBtn.on("click", removeModal);
+  $closeProjectsModalButtons.on("click", removeModal);
 
   // update modal image to next in set when clicking on images
   const updateProjectImage = () => {

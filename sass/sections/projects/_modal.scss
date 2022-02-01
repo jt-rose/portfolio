@@ -37,13 +37,14 @@
 //   }
 // }
 
-#modal-close-btn-container {
+#modal-close-btn-container-top,
+#modal-close-btn-container-bottom {
   width: 100%;
   display: flex;
   justify-content: right;
 }
 
-#close-modal-btn {
+.close-modal-btn {
   width: auto;
 }
 
@@ -114,6 +115,14 @@
   margin-left: 1.5em;
 }
 
+#modal-close-btn-container-top {
+  display: flex;
+}
+
+#modal-close-btn-container-bottom {
+  display: none;
+}
+
 @media (min-width: 610px) {
   #inner-projects-modal {
     gap: 1em;
@@ -125,5 +134,13 @@
 
   .projects-modal-skill-name {
     display: inline;
+  }
+
+  #modal-close-btn-container-top {
+    display: none;
+  }
+
+  #modal-close-btn-container-bottom {
+    display: flex;
   }
 }

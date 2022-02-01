@@ -116,12 +116,13 @@ header nav a {
 }
 
 #intro p {
-  text-align: center;
+  text-align: left;
   padding: 1em;
 }
 
 @media (min-width: 610px) {
   #intro p {
+    text-align: center;
     padding: 3em;
   }
 }

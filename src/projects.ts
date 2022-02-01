@@ -82,7 +82,7 @@ const cleanBlogServerData: ProjectData = {
 const chMeetingsData: ProjectData = {
   title: "CH Meetings",
   description:
-    "A backend server and database to manage sales enablement programs through scheduling eLearning and training workshops, with extensive use of authentication, session management, user roles, and data validation",
+    "A backend server and database to manage sales enablement programs through scheduling eLearning and training workshops",
   imagePaths: ["./assets/projects/ch-meetings.png"],
   projectLink: null,
   githubLink: "https://github.com/jt-rose/ch_meetings_server",

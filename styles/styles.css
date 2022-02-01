@@ -115,6 +115,11 @@ header nav a {
   margin-bottom: 1.5em;
 }
 
+#intro p {
+  text-align: center;
+  padding: 2em;
+}
+
 #skill-logos {
   display: flex;
   flex-wrap: wrap;

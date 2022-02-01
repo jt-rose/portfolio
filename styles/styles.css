@@ -213,12 +213,6 @@ header nav a {
   text-align: center;
 }
 
-@media (min-width: 1500px) {
-  #inner-projects-modal {
-    width: 1500px;
-    height: 800px;
-  }
-}
 #modal-close-btn-container {
   width: 100%;
   display: flex;
@@ -231,15 +225,15 @@ header nav a {
 
 #modal-image-container {
   width: 70%;
+  max-height: 50%;
   display: flex;
   justify-content: center;
 }
 
 #projects-modal-sample-img {
+  max-width: 100%;
+  max-height: 100%;
   aspect-ratio: 1.6/1;
-  min-width: 290px;
-  max-width: 1200px;
-  max-height: 860px;
   border-radius: 15px;
   border: 1px solid black;
 }

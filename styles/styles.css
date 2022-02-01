@@ -117,9 +117,14 @@ header nav a {
 
 #intro p {
   text-align: center;
-  padding: 2em;
+  padding: 1em;
 }
 
+@media (min-width: 610px) {
+  #intro p {
+    padding: 3em;
+  }
+}
 #skill-logos {
   display: flex;
   flex-wrap: wrap;

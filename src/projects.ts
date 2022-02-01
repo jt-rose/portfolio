@@ -180,7 +180,10 @@ $(() => {
 
     // if frontend project, share url
     if (projectData.projectLink) {
-      $projectsModalWebsiteURL.attr("href", projectData.projectLink).show();
+      $projectsModalWebsiteURL
+        .attr("href", projectData.projectLink)
+        .attr("target", "_blank")
+        .show();
       $urlSpace.show();
     } else {
       $projectsModalWebsiteURL.hide();
@@ -188,7 +191,9 @@ $(() => {
     }
 
     // show github link
-    $projectsModalGithubURL.attr("href", projectData.githubLink);
+    $projectsModalGithubURL
+      .attr("href", projectData.githubLink)
+      .attr("target", "_blank");
     $projectsModal.addClass("active");
   };
 

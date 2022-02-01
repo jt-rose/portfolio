@@ -419,6 +419,7 @@ header nav a {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  text-align: left;
 }
 
 #experience ul li {

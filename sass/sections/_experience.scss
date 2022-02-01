@@ -51,6 +51,11 @@
   text-align: center;
 }
 
+#experience-description article h4 {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
 #company-logos #ga-logo-container {
   border-bottom: 4px solid colors.$light-grey;
 }
@@ -69,4 +74,21 @@
 
 #bare-experience-info {
   display: none;
+}
+
+.experience-accomplishments-container {
+  display: flex;
+  justify-content: center;
+}
+
+#experience ul {
+  padding-top: 1.5em;
+  list-style: square;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+#experience ul li {
+  padding-bottom: 1em;
 }

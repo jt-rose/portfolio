@@ -237,6 +237,7 @@ header nav a {
   aspect-ratio: 1.6/1;
   border-radius: 15px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 #project-image-links {
@@ -260,11 +261,11 @@ header nav a {
 }
 
 #project-description-container {
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 1em;
-  justify-content: space-around;
+  gap: 2em;
 }
 
 #project-skills-used ul {
@@ -307,6 +308,12 @@ header nav a {
     gap: 1em;
   }
 
+  #project-description-container {
+    padding-top: 0;
+    gap: 1em;
+    justify-content: space-around;
+  }
+
   #project-skills-used ul {
     justify-content: space-around;
     gap: 2em;
@@ -314,6 +321,7 @@ header nav a {
 
   .projects-modal-skill-name {
     display: inline;
+    margin-left: 0.3em;
   }
 
   #modal-close-btn-container-top {

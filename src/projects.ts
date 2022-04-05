@@ -63,7 +63,12 @@ const joybeeData: ProjectData = {
   title: "Joybee",
   description:
     "A social hub for language exchange, where users can connect, schedule meetups, and message one another",
-  imagePaths: ["./assets/projects/2daloo-1.png"],
+  imagePaths: [
+    "./assets/projects/joybee-4.png",
+    "./assets/projects/joybee-1.png",
+    "./assets/projects/joybee-2.png",
+    "./assets/projects/joybee-3.png",
+  ],
   projectLink: "https://www.joybee.app/",
   githubLink: "https://github.com/jt-rose/joybee",
   classNameForSkills: "joybee",
@@ -73,7 +78,12 @@ const gameDocsData: ProjectData = {
   title: "Game Docs",
   description:
     "A fullstack app that allows game developers to create, edit, and collaborate on Game Design Documents (GDD)",
-  imagePaths: ["./assets/projects/2daloo-1.png"],
+  imagePaths: [
+    "./assets/projects/gamedocs-1.png",
+    "./assets/projects/gamedocs-2.png",
+    "./assets/projects/gamedocs-3.png",
+    "./assets/projects/gamedocs-4.png",
+  ],
   projectLink: "https://www.gamedocs.app",
   githubLink: "https://github.com/jt-rose/gdd-client",
   classNameForSkills: "gamedocs",
@@ -83,7 +93,12 @@ const bookcastData: ProjectData = {
   title: "Bookcast",
   description:
     'A fullstack app where users can create "Fancasts" where they pick actors for film adaptations as well as view, comment, and vote on other fancasts',
-  imagePaths: ["./assets/projects/2daloo-1.png"],
+  imagePaths: [
+    "./assets/projects/bookcast-1.png",
+    "./assets/projects/bookcast-2.png",
+    "./assets/projects/bookcast-3.png",
+    "./assets/projects/bookcast-4.png",
+  ],
   projectLink: "https://www.bookcast.herokuapp.com",
   githubLink: "https://github.com/jt-rose/bookcast-client",
   classNameForSkills: "bookcast",
@@ -93,7 +108,14 @@ const hemmingwayData: ProjectData = {
   title: "Hemmingway",
   description:
     "A fullstack health and fitness tracking app with automated calorie calculations and data visualization",
-  imagePaths: ["./assets/projects/2daloo-1.png"],
+  imagePaths: [
+    "./assets/projects/hemmingway-1.png",
+    "./assets/projects/hemmingway-2.png",
+    "./assets/projects/hemmingway-3.png",
+    "./assets/projects/hemmingway-4.png",
+    "./assets/projects/hemmingway-5.png",
+    "./assets/projects/hemmingway-6.png",
+  ],
   projectLink: "https://www.hemmingway.app",
   githubLink: "https://github.com/jt-rose/hemmingway-frontend",
   classNameForSkills: "hemmingway",
@@ -164,6 +186,11 @@ $(() => {
   const $vgSalesPreview = $("#vg-sales-preview");
   const $chMeetingsPreview = $("#ch-meetings-preview");
   const $cleanBlogServerPreview = $("#clean-blog-server-preview");
+
+  const $joybeePreview = $("#joybee-preview");
+  const $gamedocsPreview = $("#gamedocs-preview");
+  const $bookcastPreview = $("#bookcast-preview");
+  const $hemmingwayPreview = $("#hemmingway-preview");
 
   const $projectsModal = $("#projects-modal");
   const $projectsModalTitle = $("#projects-modal-title");
@@ -242,6 +269,11 @@ $(() => {
   const showCleanBlogData = updateModalProjectData(cleanBlogData);
   const show2dalooData = updateModalProjectData(_2dalooData);
 
+  const showJoybeeData = updateModalProjectData(joybeeData);
+  const showGameDocsData = updateModalProjectData(gameDocsData);
+  const showBookcastData = updateModalProjectData(bookcastData);
+  const showHemmingwayData = updateModalProjectData(hemmingwayData);
+
   const showVGSalesData = updateModalProjectData(vgSalesData);
   const showCHMeetingsData = updateModalProjectData(chMeetingsData);
   const showCleanBlogServerData = updateModalProjectData(cleanBlogServerData);
@@ -250,6 +282,11 @@ $(() => {
   $rxpPreview.on("click", showRXPData);
   $cleanBlogPreview.on("click", showCleanBlogData);
   $2dalooPreview.on("click", show2dalooData);
+
+  $joybeePreview.on("click", showJoybeeData);
+  $gamedocsPreview.on("click", showGameDocsData);
+  $bookcastPreview.on("click", showBookcastData);
+  $hemmingwayPreview.on("click", showHemmingwayData);
 
   $vgSalesPreview.on("click", showVGSalesData);
   $chMeetingsPreview.on("click", showCHMeetingsData);

@@ -59,6 +59,46 @@ const _2dalooData: ProjectData = {
   classNameForSkills: "2daloo",
 };
 
+const joybeeData: ProjectData = {
+  title: "Joybee",
+  description:
+    "A social hub for language exchange, where users can connect, schedule meetups, and message one another",
+  imagePaths: ["./assets/projects/2daloo-1.png"],
+  projectLink: "https://www.joybee.app/",
+  githubLink: "https://github.com/jt-rose/joybee",
+  classNameForSkills: "joybee",
+};
+
+const gameDocsData: ProjectData = {
+  title: "Game Docs",
+  description:
+    "A fullstack app that allows game developers to create, edit, and collaborate on Game Design Documents (GDD)",
+  imagePaths: ["./assets/projects/2daloo-1.png"],
+  projectLink: "https://www.gamedocs.app",
+  githubLink: "https://github.com/jt-rose/gdd-client",
+  classNameForSkills: "gamedocs",
+};
+
+const bookcastData: ProjectData = {
+  title: "Bookcast",
+  description:
+    'A fullstack app where users can create "Fancasts" where they pick actors for film adaptations as well as view, comment, and vote on other fancasts',
+  imagePaths: ["./assets/projects/2daloo-1.png"],
+  projectLink: "https://www.bookcast.herokuapp.com",
+  githubLink: "https://github.com/jt-rose/bookcast-client",
+  classNameForSkills: "bookcast",
+};
+
+const hemmingwayData: ProjectData = {
+  title: "Hemmingway",
+  description:
+    "A fullstack health and fitness tracking app with automated calorie calculations and data visualization",
+  imagePaths: ["./assets/projects/2daloo-1.png"],
+  projectLink: "https://www.hemmingway.app",
+  githubLink: "https://github.com/jt-rose/hemmingway-frontend",
+  classNameForSkills: "hemmingway",
+};
+
 // servers
 const vgSalesData: ProjectData = {
   title: "VG-Sales",
